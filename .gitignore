@@ -1,0 +1,3 @@
+#ignor gulp file
+.idea/
+node_modules/

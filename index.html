@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <title>jbw</title>
+	<link rel="stylesheet" href="dist/css_mini/mini_style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="promo" id="promo">
+            <span class="promo-text ">Lorem ipsum dolor sit amet donec voluptatem ipsum dolor sit ame</span>
+            <button id="close-propmo"></button>
+        </div>
+        <div id="popUp">
+            <div class="popUp-form">
+                <button id="close-popUp"></button>
+                <h4 class="popUp-title">Ask us how we can help you</h4>
+                <div class="form-group_name">
+                    <label for="form-name">Enter your name</label>
+                    <input type="text" name="name" required class="form-name" autocomplete="new-password">
+                    <span class="name-error-message"></span>
+                </div>
+                <div class="form-group_email">
+                    <label for="email">Enter your email</label>
+                    <input type="email" name="email" required class="form-email" autocomplete="new-password">
+                    <span class="email-error-message"></span>
+                </div>
+                <div class="form-group_phone">
+                    <label for="phone">Your phone</label>
+                    <div class="select-group">
+                        <select class="countries countries-ukr" id="countries">
+                                <option>Ukraine</option>
+                                <option>Belarus</option>
+                                <option>Cuba</option>
+                        </select>
+                        <input type="text" name="phone" class="form-phone" required placeholder="+ 38" autocomplete="new-password"> 
+                    </div>
+                    <span class="phone-error-message"></span>
+                </div>
+                <button class="form_submit">Continue</button>
+            </div>
+        </div>
+        <div id="popUp2">
+            <div class="send-form">
+                <button id="close-popUp2"></button>
+                <img class="send-form_img" src="dist/img/envelope.svg" alt="send">
+                <p class="send-form_title">Thank you!</p>
+                <button class="send-form_btn">Ok, tnx</button>
+            </div>
+        </div>
+        <div class="title">
+            Professional Сustom <br> Service Just  <span class="title-last">for You</span>
+        </div>
+        <div class="form">
+            <h4 class="form-title">Calculate the Price</h4>
+            <div class="form-group_select">
+                <label for="form-lvl">Choose level</label>
+                <select class="form-lvl" name="lvl">
+                    <option>Light</option>
+                    <option>Middle</option>
+                    <option>Hardcore</option>
+                </select>
+            </div>
+            <div class="form_footer">
+                <div class="form_footer_counter">
+                    <button class="btn-minus">-</button>
+                    <input type="text" name="count" class="input-counter" value="1">
+                    <button class="btn-plus">+</button>
+                </div>
+                <div class="form_footer_price">
+                    <span class="span-price">5</span>
+                    <button class="btn-popup">Pop Up</button>  
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="dist/js_mini/main_mini.js"></script>
+</body>
+</html>
