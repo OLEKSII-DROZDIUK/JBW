@@ -141,15 +141,16 @@ $(function () {
         var that = this;
 
         setTimeout(function() {
-            const res = /[^а-яА-ЯїЇєЄіІёЁҐґ\- ’'‘"()]/g.exec(that.value);
+            const res = /[^а-яА-ЯїЇєЄіІёЁҐґ\- ’'‘"()]/g.exec(that.value); //непонятно какие именно символы оставлять, сотавил более логичные для имени и фамилии
             that.value = that.value.replace(res, '');
         }, 0);
     });
 
     formForPhone.keypress(function(event){
         event = event || window.event;
-        if (event.charCode && event.charCode!=0 && event.charCode!=46 && (event.charCode < 48 || event.charCode > 57) )
-          return false;
+        
+        if (event.charCode && event.charCode != 0 && (event.charCode < 48 || event.charCode > 57))
+            return false;
     })
 
 //validation form
@@ -222,8 +223,8 @@ $(function () {
     
         } else {
             emailErr.text(validateEmail(formForEmail.val()) === "ok"?"":validateEmail(formForEmail.val()));
-            nameErr.text(validateName(formForName.val())=== "ok"?"":validateEmail(formForName.val()));
-            phoneErr.text(validatePhone(formForPhone.val())=== "ok"?"":validateEmail(formForPhone.val())); 
+            nameErr.text(validateName(formForName.val())=== "ok"?"":validateName(formForName.val()));
+            phoneErr.text(validatePhone(formForPhone.val())=== "ok"?"":validatePhone(formForPhone.val())); 
         }
     })
 //close send form
